@@ -3,7 +3,7 @@
 const nrFirst = document.querySelector("#firstnumber");
 const nrSecond = document.querySelector("#secondnumber");
 const operator = document.querySelector("#operator");
-const result = document.querySelector("#results");
+let result = document.querySelector("#results");
 
 document.addEventListener("DOMContentLoaded", start);
 
@@ -22,7 +22,7 @@ function start() {
 function clickCalculateButton() {
   let nrFirstSomNr = parseInt(nrFirst.value);
   let nrSecondSomNr = parseInt(nrSecond.value);
-  console.log(operator.value);
+  //   console.log(operator.value);
 
   if (operator.value == "add") {
     nrFirst.value = nrFirstSomNr + nrSecondSomNr;
@@ -39,7 +39,8 @@ function clickCalculateButton() {
 }
 
 function gemtResultater(result) {
+  console.log(result);
   let gemtResultat = document.createElement("li");
   gemtResultat.textContent = result;
-  results.appendChild(gemtResultat);
+  result.appendChild(gemtResultat);
 }
